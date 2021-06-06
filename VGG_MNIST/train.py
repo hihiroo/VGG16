@@ -32,7 +32,7 @@ if __name__ == '__main__':
     val_percent = 0.1
 
     # 학습률
-    lr = 0.0001
+    lr = 0.001
 
     # 체크포인트 저장 경로
     checkpoint_dir = 'backupVGG/'
