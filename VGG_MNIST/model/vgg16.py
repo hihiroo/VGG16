@@ -11,27 +11,27 @@ class VGG16(nn.Module):
         # 모델 구현
         self.conv = nn.Sequential(
             # vgg의 커널사이즈는 3x3으로 고정
-            nn.Conv2d(in_channels=_input_channel, out_channels=64, kernel_size=3, padding=1), nn.LeakyReLU(0.01), # 224x224x3 -> 224x224x64 / padding=1, stride=1, kernel=3이면 인풋 크기와 같음
-            nn.Conv2d(in_channels=64, out_channels=64, kernel_size=3, padding=1), nn.LeakyReLU(0.01),
+            nn.Conv2d(in_channels=_input_channel, out_channels=64, kernel_size=3, padding=1), nn.BatchNorm2d(64), nn.LeakyReLU(0.01), # 224x224x3 -> 224x224x64 / padding=1, stride=1, kernel=3이면 인풋 크기와 같음
+            nn.Conv2d(in_channels=64, out_channels=64, kernel_size=3, padding=1), nn.BatchNorm2d(64), nn.LeakyReLU(0.01),
             nn.MaxPool2d(kernel_size=2, stride=2), # 28x28x64 -> 14x14x64
 
-            nn.Conv2d(in_channels=64, out_channels=128, kernel_size=3, padding=1), nn.LeakyReLU(0.01),
-            nn.Conv2d(in_channels=128, out_channels=128, kernel_size=3, padding=1), nn.LeakyReLU(0.01),
+            nn.Conv2d(in_channels=64, out_channels=128, kernel_size=3, padding=1), nn.BatchNorm2d(128), nn.LeakyReLU(0.01),
+            nn.Conv2d(in_channels=128, out_channels=128, kernel_size=3, padding=1), nn.BatchNorm2d(128), nn.LeakyReLU(0.01),
             nn.MaxPool2d(kernel_size=2, stride=2), # 14x14x128 -> 7x7x128
 
-            nn.Conv2d(in_channels=128, out_channels=256, kernel_size=3, padding=1),nn.LeakyReLU(0.01),
-            nn.Conv2d(in_channels=256, out_channels=256, kernel_size=3, padding=1),nn.LeakyReLU(0.01),
-            nn.Conv2d(in_channels=256, out_channels=256, kernel_size=3, padding=1),nn.LeakyReLU(0.01),
+            nn.Conv2d(in_channels=128, out_channels=256, kernel_size=3, padding=1),nn.BatchNorm2d(256),nn.LeakyReLU(0.01),
+            nn.Conv2d(in_channels=256, out_channels=256, kernel_size=3, padding=1),nn.BatchNorm2d(256),nn.LeakyReLU(0.01),
+            nn.Conv2d(in_channels=256, out_channels=256, kernel_size=3, padding=1),nn.BatchNorm2d(256),nn.LeakyReLU(0.01),
             nn.MaxPool2d(kernel_size=2, stride=2, padding=1), # 7x7x256 -> 4x4x256
 
-            nn.Conv2d(in_channels=256, out_channels=512, kernel_size=3, padding=1),nn.LeakyReLU(0.01),
-            nn.Conv2d(in_channels=512, out_channels=512, kernel_size=3, padding=1),nn.LeakyReLU(0.01),
-            nn.Conv2d(in_channels=512, out_channels=512, kernel_size=3, padding=1),nn.LeakyReLU(0.01),
+            nn.Conv2d(in_channels=256, out_channels=512, kernel_size=3, padding=1),nn.BatchNorm2d(512),nn.LeakyReLU(0.01),
+            nn.Conv2d(in_channels=512, out_channels=512, kernel_size=3, padding=1),nn.BatchNorm2d(512),nn.LeakyReLU(0.01),
+            nn.Conv2d(in_channels=512, out_channels=512, kernel_size=3, padding=1),nn.BatchNorm2d(512),nn.LeakyReLU(0.01),
             nn.MaxPool2d(kernel_size=2, stride=2), # 4x4x512 -> 2x2x512
 
-            nn.Conv2d(in_channels=512, out_channels=512, kernel_size=3, padding=1),nn.LeakyReLU(0.01),
-            nn.Conv2d(in_channels=512, out_channels=512, kernel_size=3, padding=1),nn.LeakyReLU(0.01),
-            nn.Conv2d(in_channels=512, out_channels=512, kernel_size=3, padding=1),nn.LeakyReLU(0.01),
+            nn.Conv2d(in_channels=512, out_channels=512, kernel_size=3, padding=1),nn.BatchNorm2d(512),nn.LeakyReLU(0.01),
+            nn.Conv2d(in_channels=512, out_channels=512, kernel_size=3, padding=1),nn.BatchNorm2d(512),nn.LeakyReLU(0.01),
+            nn.Conv2d(in_channels=512, out_channels=512, kernel_size=3, padding=1),nn.BatchNorm2d(512),nn.LeakyReLU(0.01),
             nn.MaxPool2d(kernel_size=2, stride=1), # 2x2x512 -> 1x1x512
         )
 
