@@ -38,10 +38,10 @@ class VGG16(nn.Module):
         self.fcLayer = nn.Sequential(
             nn.Linear(1*1*512,128), # 32*1x1x512를 fc하여 32x1x1x128으로
             nn.LeakyReLU(0.01),
-            #nn.Dropout(p=0.5),
+            nn.Dropout(p=0.5),
             nn.Linear(128, 128),
             nn.LeakyReLU(0.01),
-            #nn.Dropout(p=0.5),
+            nn.Dropout(p=0.5),
             nn.Linear(128, num_class),
             nn.Softmax(dim=1),
         )

@@ -23,7 +23,7 @@ if __name__ == '__main__':
 
     # 전체 데이터를 몇 번이나 볼 것인가?
     start_epoch = 1
-    epoch_num = 30
+    epoch_num = 50
 
     # 학습 시에 한번에 몇 개의 데이터를 볼 것인가?
     batch_size = 64
