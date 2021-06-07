@@ -26,13 +26,13 @@ if __name__ == '__main__':
     epoch_num = 50
 
     # 학습 시에 한번에 몇 개의 데이터를 볼 것인가?
-    batch_size = 64
+    batch_size = 16
 
     # 검증 데이터 비율
     val_percent = 0.1
 
     # 학습률
-    lr = 0.001
+    lr = 0.0001
 
     # 체크포인트 저장 경로
     checkpoint_dir = 'backupVGG/'
