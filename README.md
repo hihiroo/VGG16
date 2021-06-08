@@ -1,6 +1,10 @@
 # VGG16
 한양대학교ERICA 멀티미디어정보처리 과제  
 
+[**결과 및 분석 보러가기**](https://www.notion.so/mksmk/mip2021-VGG16-dfaec4957e584d0ea225c3dcfe93c299)
+
+<br>
+
 1. 실습 파일의 VGG_MNIST/model/vgg16 내의 VGG16 클래스에 VGG16 직접 구현
 
      - Pytorch 내 구현된 VGG Model 활용 금지
