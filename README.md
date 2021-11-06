@@ -1,7 +1,7 @@
 # VGG16
 한양대학교ERICA 멀티미디어정보처리 과제  
 
-[**결과 및 분석 보러가기**](https://www.notion.so/mksmk/mip2021-VGG16-dfaec4957e584d0ea225c3dcfe93c299)
+[**결과 및 분석 보러가기**](https://mksmk.notion.site/VGG16-7830465c35ed4aabaaebdb41f8363986)
 
 <br>
 
